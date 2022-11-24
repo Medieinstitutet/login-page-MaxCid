@@ -17,6 +17,7 @@ const logoutBtn = document.getElementById("logoutBtn")
 const loginPage = document.getElementById("loginPage");
 const linkCreateAccount = document.getElementById ("linkCreateAccount");
 const accountPage = document.getElementById("accountPage");
+const createAccountPage = document.getElementById("createAccountPage")
 
 
 
@@ -30,6 +31,7 @@ const accountPage = document.getElementById("accountPage");
 
 /// storage space for accounts
 
+
 let accounts = [
     {id:1, user:'janne', password:"test",},
     {id:2, user:'PirateKing', password: "1.piece",},
@@ -38,7 +40,7 @@ let accounts = [
     ];
 
     localStorage.setItem("accounts", JSON.stringify(accounts));
-    console.log("localstorage is working", accounts)
+    console.log("localstorage is working", accounts);
 
 
 // login page (get a verification from the inputs and change page)
@@ -47,26 +49,37 @@ let accounts = [
  loginBtn.addEventListener("click", () => {
         let username = usernameInput.value;
         let password = passwordInput.value;
-        console.log(username, password);
-        localStorage.setItem("username", username);
-        printUsername()
-        
+        for (i = 0; i < accounts.length; i++) {
+        if(username === accounts[i].user && password === accounts[i].password){
+            localStorage.setItem("user", accounts[i].user);
+            loginPage.classList.add()
+             console.log("you are now online", username);
+        }}     
+        console.log("hejnej tack") 
+        document.getElementById("inputErrorMsg").innerHTML = `its all wrong mr`
 
  })
 
 
-function printUsername () {
-    accountPage.innerHtml = localStorage.getItem("username");
-    accountName.innertext = "You are:" + accountName;
-}
-
-function printUnknown () {
-
-}
-
 
 
 // // // Create an account page 
+
+linkCreateAccount.addEventListener("click", () => {
+    console.log("working")
+    loginPage.classList.add("formHidden")
+    createAccountPage.classList.remove("formHidden")
+    
+  
+})
+
+linkLogin.addEventListener("click", () => {
+    console.log("workingforreals")
+    createAccountPage.classList.add("formHidden")
+    loginPage.classList.remove("formHidden")
+    
+  
+})
 
 // //  createAccBtn.addEventListener("click", () => {
 
@@ -74,9 +87,14 @@ function printUnknown () {
 
 
 
-//  // login out
+//  // logout
 
-//  logoutBtn.addEventListener("click", () => {
+logoutBtn.addEventListener("click", () => {
+    console.log("working")
+    accountPage.style.display = "none";
+    loginPage.style.display = "block";
+
+    
+})
 
 //  })
-
