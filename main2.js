@@ -44,7 +44,7 @@ let accounts = [
 
 
 // login page (get a verification from the inputs and change page)
-
+ 
 
  loginBtn.addEventListener("click", () => {
         let username = usernameInput.value;
@@ -56,6 +56,7 @@ let accounts = [
              console.log("you are now online", username);
         }}     
         console.log("hejnej tack") 
+        let inputErrorMsg = document.getElementById("inputErrorMsg")
         document.getElementById("inputErrorMsg").innerHTML = `its all wrong mr`
 
  })
