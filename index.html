@@ -21,7 +21,6 @@
 <!--Login rutan med knappar och länkar-->
         <form class="form" id="login">
             <h1 class="loginTitle" id="loginTitle">Login</h1>
-            <div class="formMsg formMsgError"></div>
             <div class="txtInputGroup">
                 <input type="text" class="formInput" id="usernameInput" autofocus placeholder="Username">
                 <input type="password" class="formInput" id="passwordInput" autofocus placeholder="Password">
@@ -38,20 +37,13 @@
     <div class="container formHidden" id="createAccountPage" >
         <form class="form">
             <h1 class="loginTitle">Create Account</h1>
-            <div class="formMsg formMsgError"></div>
             <div class="txtInputGroup">
                 <input type="text" class="formInput" id="createUsername" autofocus placeholder="Username">
-                <div class="InputErrorMsg"></div>
-            </div>
-            <div class="txtInputGroup">
                 <input type="text" class="formInput" id="createPassword" autofocus placeholder="Password">
-                <div class="InputErrorMsg"></div>
-            </div>
-            <div class="txtInputGroup">
                 <input type="text" class="formInput" id="confirmPassword" autofocus placeholder="Confirm Password">
-                <div class="InputErrorMsg"></div>
-            </div>
-            <button class="createAccBtn" type="button">Continue</button>
+            <div class="inputErrorMsg"></div>
+        </div>
+            <button  type="button" class="createAccBtn" id="createAccBtn">Continue</button>
             <p class="formText">
                 <a class="formLink" id="linkLogin">Already a member? Sign in</a>
             </p>
