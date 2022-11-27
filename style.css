@@ -16,7 +16,7 @@ body {
     background-size: cover;
 }
 
-.container {
+.container, #userOnline {
     width: 400px;
     max-width: 400px;
     margin: 1rem;
@@ -25,10 +25,17 @@ body {
     border-radius: var(--border-radius);
     background: rgba(255, 255, 255, 0.812);
 }
+#userOnline {
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
 .container,
 .formInput,
-.loginBtn, .logoutBtn {
+.loginBtn, 
+.logoutBtn,
+.header,
+.footer {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -129,34 +136,58 @@ body {
     text-decoration: underline;
 }
 
-/*   Horizontal top menu  */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #5b4d82e8;
-    position: top;
+/*  header */
+.header {
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    border-radius: var(--border-radius);
-    
-  }
-  
-   li  {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
+    background: #0198cab7;
+    color:#fff;
+    z-index: 800;
+    height: 40px;
+    overflow: hidden;
+    text-align:center;
+    line-height:1px;
+
+}
+.header.shrink {
+    height: 100px;
+    line-height:80px;
+}
+.header h1
+{
+    font-size:30px;
+    font-weight:normal;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.header.shrink h1
+{
+    font-size:24px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.content
+{
+height:2000px;
+ /*just to get the page to scroll*/
+}
+
+/* footer */
+
+.footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    background-color: #0198cae2;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: rgba(17, 17, 17, 0.48);
-    border-radius: var(--border-radius);
+    font-size: 10px;
   }
 
+  
