@@ -54,7 +54,8 @@ let loginSessions = JSON.parse(localStorage.getItem("accounts"));
 //problemet löst med en window.onload funktion... fråga mig inte en hur det gick till...
 window.onload = function () {
   console.log("Refresh!");
-  localStorage.setItem("accounts", JSON.stringify(loginSessions));
+   localStorage.setItem("loginSessions", JSON.stringify(accounts));
+   
 }
 
 if (localStorage.getItem("loginSession")) {
@@ -85,11 +86,6 @@ if (localStorage.getItem("loginSessions")){
 
 
 console.log("localestorages has been created");
-
-
-
-
-
 
 
 // login page (get a verification from the inputs and change page)
